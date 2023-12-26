@@ -10,6 +10,8 @@ const Home = ({ name }: IHomeProps) => {
     <div>
       <h1>Home</h1>
       <p>Hello, {name}!</p>
+      <Link to="/posts">Posts</Link>
+      <br />
       <Link to="/users">Users</Link>
     </div>
   );

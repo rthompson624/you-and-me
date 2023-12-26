@@ -2,15 +2,22 @@
 import "@hotwired/turbo-rails";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
+import Posts from "./pages/Posts";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home name="Rich" />,
+  },
+  {
+    path: "posts",
+    element: <Posts />,
   },
   {
     path: "users",
@@ -24,6 +31,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
