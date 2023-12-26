@@ -1,82 +1,62 @@
 [
   {
-    "title": "Yo, I'm at the game!",
-    "body": "This is so much fun!"
+    "message": "Yo, I'm at the game!"
   },
   {
-    "title": "I'm at the park",
-    "body": "This is so much fun!"
+    "message": "I'm at the park"
   },
   {
-    "title": "I'm at the beach",
-    "body": "This is so much fun!"
+    "message": "I'm at the beach"
   },
   {
-    "title": "I'm at the mall",
-    "body": "This is so much fun!"
+    "message": "I'm at the mall"
   },
   {
-    "title": "I'm at the movies",
-    "body": "This is so much fun!"
+    "message": "I'm at the movies"
   },
   {
-    "title": "I'm at the gym",
-    "body": "This is so much fun!"
+    "message": "I'm at the gym"
   },
   {
-    "title": "I'm at the pool",
-    "body": "This is so much fun!"
+    "message": "I'm at the pool"
   },
   {
-    "title": "I'm at the club",
-    "body": "This is so much fun!"
+    "message": "I'm at the club"
   },
   {
-    "title": "I'm at the bar",
-    "body": "This is so much fun!"
+    "message": "I'm at the bar"
   },
   {
-    "title": "I'm at the party",
-    "body": "This is so much fun!"
+    "message": "I'm at the party"
   },
   {
-    "title": "I'm at the concert",
-    "body": "This is so much fun!"
+    "message": "I'm at the concert"
   },
   {
-    "title": "I'm at the game",
-    "body": "This is so much fun!"
+    "message": "I'm at the game"
   },
   {
-    "title": "I'm at the park",
-    "body": "This is so much fun!"
+    "message": "I'm at the park"
   },
   {
-    "title": "I'm at the beach",
-    "body": "This is so much fun!"
+    "message": "I'm at the beach"
   },
   {
-    "title": "I'm at the mall",
-    "body": "This is so much fun!"
+    "message": "I'm at the mall"
   },
   {
-    "title": "I'm at the movies",
-    "body": "This is so much fun!"
+    "message": "I'm at the movies"
   },
   {
-    "title": "I'm at the gym",
-    "body": "This is so much fun!"
+    "message": "I'm at the gym"
   },
   {
-    "title": "I'm at the pool",
-    "body": "This is so much fun!"
+    "message": "I'm at the pool"
   },
   {
-    "title": "I'm at the club",
-    "body": "This is so much fun!"
+    "message": "I'm at the club"
   },
   {
-    "title": "I'm at the bar",
-    "body": "This is so much fun!"
+    "message": "I'm at the bar"
   }
 ]
