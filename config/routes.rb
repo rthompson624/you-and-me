@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # React web client
   root to: 'site#index'
+  get '*path', to: 'site#index', constraints: ->(req) { !req.xhr? && req.format.html? }
 
   namespace :api do
     resources :posts, only: %i[index show create update destroy]

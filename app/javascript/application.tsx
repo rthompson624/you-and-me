@@ -3,7 +3,7 @@ import "@hotwired/turbo-rails";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { store } from "./services/api/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Users from "./pages/Users";
