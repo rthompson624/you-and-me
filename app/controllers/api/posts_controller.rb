@@ -1,53 +1,59 @@
-class Api::PostsController < ApplicationController
-  before_action :set_post, only: %i[show update destroy]
+# frozen_string_literal: true
 
-  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+module Api
+  # PostsController handles the CRUD operations for Post model.
+  # It provides actions to list, show, create, update, and delete posts.
+  class PostsController < ApplicationController
+    before_action :set_post, only: %i[show update destroy]
 
-  def index
-    @posts = Post.all.order(created_at: :desc)
-    render json: @posts
-  end
+    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
-  def show
-    render json: @post
-  end
-
-  def create
-    @post = Post.new(post_params)
-
-    if @post.save
-      render json: @post, status: :created
-    else
-      render json: @post.errors, status: :unprocessable_entity
+    def index
+      @posts = Post.all.order(created_at: :desc)
+      render json: @posts
     end
-  end
 
-  def update
-    if @post.update(post_params)
+    def show
+      render json: @post
+    end
+
+    def create
+      @post = Post.new(post_params)
+
+      if @post.save
+        render json: @post, status: :created
+      else
+        render json: @post.errors, status: :unprocessable_entity
+      end
+    end
+
+    def update
+      if @post.update(post_params)
+        render json: @post, status: :ok
+      else
+        render json: @post.errors, status: :unprocessable_entity
+      end
+    end
+
+    def destroy
+      @post.destroy
       render json: @post, status: :ok
-    else
-      render json: @post.errors, status: :unprocessable_entity
     end
-  end
 
-  def destroy
-    @post.destroy
-    render json: @post, status: :ok
-  end
+    private
 
-  private
+    def set_post
+      @post = Post.find(params[:id])
+    end
 
-  def set_post
-    @post = Post.find(params[:id])
-  end
+    def record_not_found
+      render json: { error: 'Post not found' }, status: :not_found
+    end
 
-  def record_not_found
-    render json: { error: 'Post not found' }, status: :not_found
-  end
-
-  def post_params
-    params.require(:post).permit(
-      :message
-    )
+    def post_params
+      params.require(:post).permit(
+        :message
+      )
+    end
   end
 end
